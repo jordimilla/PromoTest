@@ -19,7 +19,7 @@ class SeriesCollectionViewCell: UICollectionViewCell {
     lazy var lblName: UILabel = {
         let label = UILabel()
         label.text = ""
-        label.textColor = .white
+        label.textColor = .black
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 16.0)
         label.lineBreakMode = .byWordWrapping
@@ -30,7 +30,7 @@ class SeriesCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setCell()
-        self.backgroundColor = .red
+        self.backgroundColor = .yellow
       }
 
     required init?(coder aDecoder: NSCoder) {

@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // UI
         HelperAssembly(),
         HomeAssembly(),
+        DetailAssembly(),
         // Data
         RepositoryAssembly(),
         NetworkingAssembly()
@@ -28,8 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let rootController = assembler.resolver.resolve(UIViewController.self, name: ScreenTag.home)!
-        let navigationController = UINavigationController(rootViewController: rootController)
+       let navigationController = assembler.resolver.resolve(UINavigationController.self,name: ScreenTag.home)!
         UINavigationBar.appearance().barTintColor = UIColor.black
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

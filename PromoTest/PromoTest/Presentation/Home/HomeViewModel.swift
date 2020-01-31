@@ -11,6 +11,7 @@ import RxCocoa
 
 class HomeViewModel: RxViewModel {
     
+    private var page = 1
     private let seriesRepository: SeriesRepository
     private let schedulerHelper: SchedulerHelper
     let series = BehaviorRelay<Resource<[Serie]>?>(value: nil)
@@ -21,12 +22,13 @@ class HomeViewModel: RxViewModel {
     }
     
     func getListSeries() {
-        seriesRepository.getSeries(page: 0)
+        seriesRepository.getSeries(page: page)
             .subscribeOn(schedulerHelper.backgroundWorkScheduler)
             .observeOn(schedulerHelper.mainScheduler)
             .subscribe(
                 onSuccess: { [weak self] (movies)  in
                     self?.series.accept(Resource.success(movies))
+                    self?.page += 1
                 },
                 onError: { [weak self] (e:Error) in
                     self?.series.accept(Resource.failUnknown())

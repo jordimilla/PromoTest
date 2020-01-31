@@ -12,16 +12,18 @@ class HomeAssembly: Assembly {
     
     func assemble(container: Container) {
         // ViewController
-        container.register(UIViewController.self, name: ScreenTag.home) { inject in
-            HomeViewController(
+        container.register(UINavigationController.self, name: ScreenTag.home) { inject in
+               UINavigationController(rootViewController:
+                HomeViewController(
                 router: inject.resolve(HomeRouter.self)!,
-                viewModel: inject.resolve(HomeViewModel.self)!)
+                viewModel: inject.resolve(HomeViewModel.self)!))
             }
             .inObjectScope(.weak)
         // Router
         container.register(HomeRouter.self) { inject in
             HomeRouterImpl(
-                hostViewControllerProvider: inject.resolve(Provider<UIViewController>.self, name: ScreenTag.home)!
+                hostViewControllerProvider: inject.resolve(Provider<UINavigationController>.self, name: ScreenTag.home)!,
+                detailViewControllerProvider: inject.resolve(Provider<UIViewController>.self, name: ScreenTag.detail)!
             )
         }
         // ViewModel

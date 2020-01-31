@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
         setDelegates()
+        viewModel.getListSeries()
     }
     
     private func setDelegates() {
@@ -42,7 +43,6 @@ class HomeViewController: UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpViewModel()
-        viewModel.getListSeries()
     }
 }
 
@@ -61,10 +61,16 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//            let movie: ListMovie = items[indexPath.row]
-//            print(movie.id)
-//            router.goDetailMovie(id: movie.id)
+        let serie: Serie = items[indexPath.row]
+        router.goDetailViewController(data: serie)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == items.count - 1 {
+            viewModel.getListSeries()
+        }
+    }
+
 }
 
 extension HomeViewController {
@@ -80,7 +86,8 @@ extension HomeViewController {
                     break
 
                 case .success(let array):
-                    self?.items = array ?? []
+                    guard let newElements = array else { return }
+                    self?.items += newElements
                     self?.collectionView.reloadData()
                     break
                 case .fail:

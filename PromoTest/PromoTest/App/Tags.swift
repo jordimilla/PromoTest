@@ -10,4 +10,5 @@ import Foundation
 
 struct ScreenTag {
     static let home = "home"
+    static let detail = "detail"
 }
