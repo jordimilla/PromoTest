@@ -13,7 +13,7 @@ import NetworkExtension
 import Moya_ObjectMapper
 
 protocol SeriesServices {
-    func getSeries() -> Single<[SerieTO]>
+    func getSeries(page: Int) -> Single<[SerieTO]>
 }
 
 class SeriesServicesImpl: SeriesServices {
@@ -24,8 +24,8 @@ class SeriesServicesImpl: SeriesServices {
         self.provider = provider
     }
         
-    func getSeries() -> Single<[SerieTO]> {
-        return provider.rx.request(.getSeries)
+    func getSeries(page: Int) -> Single<[SerieTO]> {
+        return provider.rx.request(.getSeries(page: page))
             .mapArray(SerieTO.self)
     }
 }

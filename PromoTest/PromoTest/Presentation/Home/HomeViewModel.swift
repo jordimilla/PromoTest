@@ -21,7 +21,7 @@ class HomeViewModel: RxViewModel {
     }
     
     func getListSeries() {
-        seriesRepository.getSeries()
+        seriesRepository.getSeries(page: 0)
             .subscribeOn(schedulerHelper.backgroundWorkScheduler)
             .observeOn(schedulerHelper.mainScheduler)
             .subscribe(

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Serie {
+public struct Serie {
     public let name: String
     public let image: String
     public let rating: Float

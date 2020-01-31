@@ -20,8 +20,8 @@ class SerieRepositoryImpl: SeriesRepository {
         self.listSerieTOMapper = listSerieTOMapper
     }
     
-    public func getSeries() -> Single<[Serie]> {
-        return seriesService.getSeries()
+    public func getSeries(page: Int) -> Single<[Serie]> {
+        return seriesService.getSeries(page: page)
             .map{ responseTO in
                 self.listSerieTOMapper(responseTO)
         }

@@ -10,6 +10,6 @@ import RxCocoa
 import RxSwift
 
 protocol SeriesRepository {
-    func getSeries() -> Single<[Serie]>
+    func getSeries(page: Int) -> Single<[Serie]>
 }
 

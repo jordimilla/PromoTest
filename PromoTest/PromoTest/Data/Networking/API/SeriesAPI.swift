@@ -10,7 +10,7 @@ import Moya
 
 
 enum SeriesAPI {
-    case getSeries
+    case getSeries(page: Int)
 }
 
 extension SeriesAPI:TargetType,AccessTokenAuthorizable {
@@ -19,7 +19,7 @@ extension SeriesAPI:TargetType,AccessTokenAuthorizable {
     public var path: String {
         switch self {
         case .getSeries:
-            return "shows?page=1"
+            return "shows"
         }
         
     }
@@ -40,8 +40,8 @@ extension SeriesAPI:TargetType,AccessTokenAuthorizable {
     
     public var task: Task {
         switch self {
-        case .getSeries:
-            return .requestPlain
+        case let .getSeries(page):
+             return .requestParameters(parameters: ["page": page], encoding: URLEncoding.default)
         }
     }
     
