@@ -16,9 +16,6 @@ class DetailViewController: UIViewController {
     let nameLabel = UILabel()
     let ratingLabel = UILabel()
     let sinopsisLabel = UILabel()
-    
-    
-    
     var router: DetailRouter
     var data: Serie?
     private var disposableBag = DisposeBag()
@@ -51,6 +48,5 @@ class DetailViewController: UIViewController {
         size: 16,
         color: .black)
     }
-    
     
 }
