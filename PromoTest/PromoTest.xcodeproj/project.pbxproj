@@ -16,6 +16,8 @@
 		9D4E8D5D23E4B77000F2E567 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D5C23E4B76F00F2E567 /* DetailAssembly.swift */; };
 		9D4E8D6523E82FAC00F2E567 /* SeriesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D6423E82FAC00F2E567 /* SeriesRepositoryTests.swift */; };
 		9D4E8D6723E82FBC00F2E567 /* MockSeriesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D6623E82FBC00F2E567 /* MockSeriesServices.swift */; };
+		9D4E8D6923E8397E00F2E567 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D6823E8397E00F2E567 /* Strings.swift */; };
+		9D4E8D6B23E839A300F2E567 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D6A23E839A300F2E567 /* Colors.swift */; };
 		9DBB545A23E4507A005F208F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB545923E4507A005F208F /* AppDelegate.swift */; };
 		9DBB545C23E4507A005F208F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB545B23E4507A005F208F /* SceneDelegate.swift */; };
 		9DBB546323E4507D005F208F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBB546223E4507D005F208F /* Assets.xcassets */; };
@@ -83,6 +85,8 @@
 		9D4E8D5C23E4B76F00F2E567 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
 		9D4E8D6423E82FAC00F2E567 /* SeriesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryTests.swift; sourceTree = "<group>"; };
 		9D4E8D6623E82FBC00F2E567 /* MockSeriesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSeriesServices.swift; sourceTree = "<group>"; };
+		9D4E8D6823E8397E00F2E567 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		9D4E8D6A23E839A300F2E567 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9DBB545623E4507A005F208F /* PromoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBB545923E4507A005F208F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DBB545B23E4507A005F208F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 				9DBB54A123E4555E005F208F /* ImageViews.swift */,
 				9DBB54A223E4555E005F208F /* Views.swift */,
 				9DBB54D823E47420005F208F /* UICollectionView+Rx.swift */,
+				9D4E8D6823E8397E00F2E567 /* Strings.swift */,
+				9D4E8D6A23E839A300F2E567 /* Colors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -757,6 +763,7 @@
 				9D4E8D5523E4B65900F2E567 /* DetailViewController.swift in Sources */,
 				9DBB54D423E46393005F208F /* NetworkingAssembly.swift in Sources */,
 				9DBB54D523E46393005F208F /* RepositoryAssembly.swift in Sources */,
+				9D4E8D6923E8397E00F2E567 /* Strings.swift in Sources */,
 				9DBB549023E451DC005F208F /* HomeViewController.swift in Sources */,
 				9DBB54C523E45BD3005F208F /* SerieRepositoryImpl.swift in Sources */,
 				9D4E8D5723E4B66600F2E567 /* DetailRouter.swift in Sources */,
@@ -773,6 +780,7 @@
 				9DBB54CA23E462BC005F208F /* Resource.swift in Sources */,
 				9DBB54BB23E45963005F208F /* MoyaPlugins.swift in Sources */,
 				9DBB54A823E455B9005F208F /* SeriesCollectionViewCell.swift in Sources */,
+				9D4E8D6B23E839A300F2E567 /* Colors.swift in Sources */,
 				9DBB549E23E45528005F208F /* HomeViewController+Layout.swift in Sources */,
 				9DBB549A23E453B5005F208F /* HomeAssembly.swift in Sources */,
 				9DBB54BF23E459A4005F208F /* SeriesAPI.swift in Sources */,

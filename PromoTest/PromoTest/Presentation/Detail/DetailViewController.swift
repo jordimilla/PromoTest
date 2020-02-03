@@ -47,6 +47,10 @@ class DetailViewController: UIViewController {
         imageView.downloaded(from: data.image)
         nameLabel.text = data.name
         ratingLabel.text = String(data.rating)
-        sinopsisLabel.text = data.sinopsis
+        sinopsisLabel.attributedText = data.sinopsis.htmlAttributed(family: sinopsisLabel.font.fontName,
+        size: 16,
+        color: .black)
     }
+    
+    
 }
