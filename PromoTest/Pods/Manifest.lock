@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - Mockit (1.5.0)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya-ObjectMapper/Core (2.8):
@@ -17,41 +18,54 @@ PODS:
     - RxSwift (~> 4.0)
   - ObjectMapper (3.5.1)
   - Result (4.1.0)
+  - RxBlocking (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
+  - RxTest (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Mockit
   - Moya
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
+  - RxBlocking
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - RxTest
   - Swinject
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Mockit
     - Moya
     - Moya-ObjectMapper
     - ObjectMapper
     - Result
+    - RxBlocking
     - RxCocoa
     - RxSwift
+    - RxTest
     - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Mockit: 09492d654a2945096603d76ea77b131bdcfb2233
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: c06f0216947862a88a9c458d91e9870892ece107
+PODFILE CHECKSUM: a057c0778754e4a03e6590a3bacf2bba2e9d9628
 
 COCOAPODS: 1.8.4

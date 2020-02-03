@@ -14,6 +14,8 @@
 		9D4E8D5723E4B66600F2E567 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D5623E4B66600F2E567 /* DetailRouter.swift */; };
 		9D4E8D5B23E4B69300F2E567 /* DetailViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D5A23E4B69300F2E567 /* DetailViewController+Layout.swift */; };
 		9D4E8D5D23E4B77000F2E567 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D5C23E4B76F00F2E567 /* DetailAssembly.swift */; };
+		9D4E8D6523E82FAC00F2E567 /* SeriesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D6423E82FAC00F2E567 /* SeriesRepositoryTests.swift */; };
+		9D4E8D6723E82FBC00F2E567 /* MockSeriesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E8D6623E82FBC00F2E567 /* MockSeriesServices.swift */; };
 		9DBB545A23E4507A005F208F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB545923E4507A005F208F /* AppDelegate.swift */; };
 		9DBB545C23E4507A005F208F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB545B23E4507A005F208F /* SceneDelegate.swift */; };
 		9DBB546323E4507D005F208F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBB546223E4507D005F208F /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		9D4E8D5623E4B66600F2E567 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		9D4E8D5A23E4B69300F2E567 /* DetailViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Layout.swift"; sourceTree = "<group>"; };
 		9D4E8D5C23E4B76F00F2E567 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
+		9D4E8D6423E82FAC00F2E567 /* SeriesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryTests.swift; sourceTree = "<group>"; };
+		9D4E8D6623E82FBC00F2E567 /* MockSeriesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSeriesServices.swift; sourceTree = "<group>"; };
 		9DBB545623E4507A005F208F /* PromoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBB545923E4507A005F208F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DBB545B23E4507A005F208F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +180,38 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		9D4E8D6023E82F7300F2E567 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9D4E8D6223E82F8D00F2E567 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9D4E8D6123E82F7C00F2E567 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				9D4E8D6323E82F9500F2E567 /* Networking */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		9D4E8D6223E82F8D00F2E567 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9D4E8D6423E82FAC00F2E567 /* SeriesRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9D4E8D6323E82F9500F2E567 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9D4E8D6623E82FBC00F2E567 /* MockSeriesServices.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		9DBB544D23E4507A005F208F = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +249,8 @@
 		9DBB546F23E4507D005F208F /* PromoTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				9D4E8D6023E82F7300F2E567 /* Data */,
+				9D4E8D6123E82F7C00F2E567 /* Mock */,
 				9DBB547023E4507E005F208F /* PromoTestTests.swift */,
 				9DBB547223E4507E005F208F /* Info.plist */,
 			);
@@ -483,6 +521,7 @@
 				9DBB546823E4507D005F208F /* Sources */,
 				9DBB546923E4507D005F208F /* Frameworks */,
 				9DBB546A23E4507D005F208F /* Resources */,
+				4817A4F6EE082AB2EE47BCF4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -604,6 +643,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4817A4F6EE082AB2EE47BCF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PromoTestTests/Pods-PromoTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PromoTestTests/Pods-PromoTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PromoTestTests/Pods-PromoTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		63C104FD5727E6DF6E83FDD2 /* [CP] Embed Pods Frameworks */ = {
@@ -733,7 +789,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4E8D6523E82FAC00F2E567 /* SeriesRepositoryTests.swift in Sources */,
 				9DBB547123E4507E005F208F /* PromoTestTests.swift in Sources */,
+				9D4E8D6723E82FBC00F2E567 /* MockSeriesServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
